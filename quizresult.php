@@ -31,10 +31,11 @@ redirect("index.php");
 ?> 
 <form> 
 <div><?php echo $res->Question ; ?></div>
-<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans->Answer==$res->ChoiceA) ? 'CHECKED' : ''; ?>> A. <?php echo $res->ChoiceA; ?></div>
-<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans->Answer==$res->ChoiceB) ? 'CHECKED' : ''; ?>> B. <?php echo $res->ChoiceB; ?></div>
-<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans->Answer==$res->ChoiceC) ? 'CHECKED' : ''; ?>> C. <?php echo $res->ChoiceC; ?></div>
-<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans->Answer==$res->ChoiceD) ? 'CHECKED' : ''; ?>> D. <?php echo $res->ChoiceD; ?></div> 
+<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans && $ans->Answer == $res->ChoiceA) ? 'CHECKED' : ''; ?>> A. <?php echo $res->ChoiceA; ?></div>
+<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans && $ans->Answer == $res->ChoiceB) ? 'CHECKED' : ''; ?>> B. <?php echo $res->ChoiceB; ?></div>
+<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans && $ans->Answer == $res->ChoiceC) ? 'CHECKED' : ''; ?>> C. <?php echo $res->ChoiceC; ?></div>
+<div class="col-md-3"><input class="radios" type="radio" disabled="true" <?php echo ($ans && $ans->Answer == $res->ChoiceD) ? 'CHECKED' : ''; ?>> D. <?php echo $res->ChoiceD; ?></div>
+
 </form>
 <?php } ?>
 </div>
