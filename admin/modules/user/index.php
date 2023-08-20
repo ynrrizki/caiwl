@@ -26,5 +26,3 @@ switch ($view) {
 		$content    = 'list.php';		
 }
 require_once("../../navigation/navigations.php");
-?>
-  
