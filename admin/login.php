@@ -23,7 +23,7 @@ if (isset($_SESSION['USERID'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link href="<?php echo web_root; ?>css/bootstrap.min.css" rel="stylesheet"> -->
-  <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

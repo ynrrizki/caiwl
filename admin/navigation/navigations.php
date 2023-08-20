@@ -44,6 +44,12 @@
       align-items: center;
     }
   </style>
+
+  <style>
+    .form-group {
+      margin-bottom: 25px;
+    }
+  </style>
   <?php
   admin_confirm_logged_in();
   ?>
