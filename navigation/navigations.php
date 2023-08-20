@@ -1,171 +1,229 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-<title><?php echo $title;?> | Capiz State Unversity</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<!-- Bootstrap core CSS -->
-<link href="<?php echo web_root; ?>css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo web_root; ?>css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
-<link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet" media="screen">  
-<!-- <link href="<?php echo web_root; ?>css/kcctc.css" rel="stylesheet" media="screen">  -->
-<link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen">  
-<link rel="stylesheet" type="text/css" href="<?php echo web_root; ?>loginregister.css">  
-<link rel="stylesheet" href="<?php echo web_root; ?>assets/iCheck/flat/blue.css">
-<!-- bootstrap wysihtml5 - text editor -->
-<link rel="stylesheet" href="<?php echo web_root; ?>assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-<link rel="stylesheet" href="<?php echo web_root; ?>css/jquery-ui.css">  
- <style type="text/css"> 
- 
-#content {
-  min-height: 550px;
-  margin: 0;
-  width: 100%;
-}
-#footer > div {
-  background-color: #fff;
-  min-height: 200px;
-  padding: 10px 50px;
-  margin-top: 30px;
-  border-top: 1px solid #ddd;
+  <title><?php echo $title;?> | Capiz State Unversity</title>
 
-}
-.footer-links { 
-  /*margin-left: 5px;*/
-}
-#footer > footer { 
-    background-color: rgb(0, 67, 200);
-  min-height: 50px;
-  padding: 10px; 
-  border-top: 1px solid #ddd;
-  color:#fff;
 
-}
-.navbar-nav {
-  float: right;
-}
-@media only screen and (max-width: 768px){
- .navbar-nav {
-  float: none;
- }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
-}
-#content { 
-  margin-right: 0px;
-  margin-left: 90px;
-  width:90%;
-}
+  <!-- Icons. Uncomment required icon fonts -->
+  <link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/fonts/boxicons.css" />
 
-#content:before,
-#content:after {
-  display: table;
-  content: "";
-}
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/css/demo.css" />
 
-#content:after {
-  clear: both;
-}
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-#content:before,
-#content:after {
-  display: table;
-  content: "";
-}
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/libs/apex-charts/apex-charts.css" />
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/libs/dataTables/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Page CSS -->
 
-#content:after {
-clear: both;
-}
+  <!-- Helpers -->
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/js/helpers.js"></script>
 
-#mySidenav a {
-    position: absolute;
-    left: -130px;
-    transition: 0.3s;
-    padding: 20px;
-    width: 190px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    border-radius: 0 5px 5px 0;
-}
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="<?php echo web_root; ?>sneat/assets/js/config.js"></script>
+  <style>
+    .app-brand-logo {
+      width: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <?php
+  admin_confirm_logged_in();
+  ?>
 
-#mySidenav a:hover {
-    left: 0;
-}
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
 
-#lesson {
-    top: 180px;
-    background-color: rgb(0, 67, 200)
-}
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="<?php echo web_root; ?>admin/index.php" class="app-brand-link">
+            <span class="app-brand-logo demo">
+              <img src="<?php echo web_root ?>images/Logo.png" alt="Logo" width="100" height="100">
+            </span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2">Dashboard</span>
+          </a>
 
-#exercise {
-    top:260px;
-    background-color: rgb(0, 81, 242);
-}
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+          </a>
+        </div>
 
-#download {
-    top: 340px;
-    background-color: rgb(33, 107, 255);
-}
+        <div class="menu-inner-shadow"></div>
 
-#about {
-    top: 420px;
-    background-color: rgb(79, 138, 255);
-}
-#login {
-    top: 500px;
-    background-color: rgb(137, 176, 255);
-}
+        <ul class="menu-inner py-1">
+          <!-- Dashboard -->
+          <li class="menu-item <?= $_SERVER['REQUEST_URI'] === '/caiwl/admin/modules/lesson/index.php' ? 'active' : '' ?>">
+            <a href="<?php echo web_root; ?>admin/modules/lesson/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-book-open"></i>
+              <div data-i18n="Pelajaran">Pelajaran</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $_SERVER['REQUEST_URI'] === '/caiwl/admin/modules/exercises/index.php' ? 'active' : '' ?>">
+            <a href="<?php echo web_root; ?>admin/modules/exercises/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-pencil"></i>
+              <div data-i18n="Latihan">Latihan</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $_SERVER['REQUEST_URI'] === '/caiwl/admin/modules/modstudent/index.php' ? 'active' : '' ?>">
+            <a href="<?php echo web_root; ?>admin/modules/modstudent/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-id-card"></i>
+              <div data-i18n="Murid">Murid</div>
+            </a>
+          </li>
+          <li class="menu-item <?= $_SERVER['REQUEST_URI'] === '/caiwl/admin/modules/user/index.php' ? 'active' : '' ?>">
+            <a href="<?php echo web_root; ?>admin/modules/user/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-user"></i>
+              <div data-i18n="Manajemen Pengguna">Manajemen Pengguna</div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- / Menu -->
 
-#title-header {
-  background-color: rgb(0, 67, 200); 
-  border-bottom: 1px solid #ddd; 
-  height: 130px;  
-  padding: 10px 0px;
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
-}
- 
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Navbar -->
 
- </style>
- 
+        <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="bx bx-menu bx-sm"></i>
+            </a>
+          </div>
 
-<body >
-<section id="title-header">
-  <div class="title">  
-     <img class="logo" src="cap.png">Capiz State University <br>Mambusao Satellite College
-      <br>Poblacion Mambusao, Capiz
-      <p class="subtitle"> COMPUTER AIDED INSTRUCTION IN WORLD LITERATURE</p> 
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+              <div class="nav-item d-flex align-items-center">
+                <i class="bx bx-search fs-4 lh-0"></i>
+                <input type="text" class="form-control border-0 shadow-none" placeholder="Search..." aria-label="Search..." />
+              </div>
+            </div>
+            <!-- /Search -->
+
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <!-- User -->
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <div class="avatar avatar-online">
+                    <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['NAME']; ?>" alt class="w-px-40 h-auto rounded-circle" />
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar avatar-online">
+                            <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['NAME']; ?>" alt class="w-px-40 h-auto rounded-circle" />
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="fw-semibold d-block"><?php echo $_SESSION['NAME']; ?></span>
+                          <small class="text-muted">Admin</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="<?php echo web_root; ?>admin/logout.php">
+                      <i class="bx bx-power-off me-2"></i>
+                      <span class="align-middle">Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ User -->
+            </ul>
+          </div>
+        </nav>
+
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <?php
+            check_message();
+            // echo $_SERVER['REQUEST_URI']
+            ?>
+            <?php require_once $content; ?>
+          </div>
+          <!-- / Content -->
+
+          <!-- Footer -->
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+              <div class="mb-2 mb-md-0">
+                © Bimbingan Belajar Fahmi Ramadhan
+              </div>
+            </div>
+          </footer>
+          <!-- / Footer -->
+
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
   </div>
-</section>  
-<section id="navigation">
-  <div id="mySidenav" class="sidenav">
-    <a href="<?php echo web_root; ?>index.php?q=lesson" id="lesson">Lesson <i class="fa fa-home pull-right"></i></a> 
-    <a href="<?php echo web_root; ?>index.php?q=exercises" id="exercise">Exercises <i class="fa fa-pencil pull-right"></i></a>
-    <a href="<?php echo web_root; ?>index.php?q=download" id="download">Download <i class="fa fa-download pull-right"></i></a>
-    <a href="<?php echo web_root; ?>index.php?q=about" id="about">About Us <i class="fa fa-info-circle pull-right"></i></a>  
-     <a href="logout.php" id="login">Logout <i class="fa fa-sign-out pull-right"></i></a> 
-  </div>
-</section>  
+  <!-- / Layout wrapper -->
 
-<section id="content"> 
-<?php check_message(); ?> 
-  <div class="container"> 
-    <?php require_once $content; ?> 
-  </div>  
-</section>
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <!-- <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/popper/popper.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/js/bootstrap.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-<section id="footer"> 
-<!--      <div > 
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/js/menu.js"></script> -->
+  <!-- endbuild -->
 
-</div>   -->
-<footer  >
-    <p align="left">&copy; Capiz State Unversity</p>
-</footer>
-</section>
+  <!-- Main JS -->
+  <!-- <script src="<?php echo web_root; ?>sneat/assets/js/main.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/dataTables/dataTables.min.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/dataTables/dataTables.bootstrap5.min.js"></script>
+
+  <script src="<?php echo web_root; ?>admin/adminMenu/dist/metisMenu.min.js"></script>
+
+  <script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="<?php echo web_root; ?>js/locales/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
+
+  <script type="text/javascript" language="javascript" src="<?php echo web_root; ?>js/kcctc.js"></script>
+  <script src="<?php echo web_root; ?>assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script> -->
+  <!-- <script type="text/javascript" src="<?php echo web_root; ?>js/jquery-ui.js"></script> -->
+  <!-- <script type="text/javascript" src="<?php echo web_root; ?>js/autofunc.js"></script> -->
+
   <script type="text/javascript" language="javascript" src="<?php echo web_root; ?>jquery/jquery.min.js"></script>
   <script src="<?php echo web_root; ?>js/bootstrap.min.js"></script> 
   <script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
@@ -322,4 +380,5 @@ $('#date_picker').datetimepicker({
   </script>     
 
 </body>
+
 </html>
