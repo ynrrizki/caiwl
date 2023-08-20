@@ -1,289 +1,398 @@
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<title>COMPUTER AIDED INSTRUCTION IN WORLD LITERATURE</title>
+  <title>Dashboard | Bimbingan Belajar Fahmi Ramadhan</title>
 
-<!-- Bootstrap core CSS -->
-<link href="<?php echo web_root; ?>css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo web_root; ?>css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen"/>
-<link href="<?php echo web_root; ?>css/dataTables.bootstrap.css" rel="stylesheet" media="screen"/>  
-<link href="<?php echo web_root; ?>css/alumni.css" rel="stylesheet" media="screen"/>
-<link href="<?php echo web_root; ?>fonts/font-awesome.min.css" rel="stylesheet"/>   
-<!-- <link href="<?php echo web_root; ?>admin/adminMenu/dist/metisMenu.min.css" rel="stylesheet"/>   -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="<?php echo web_root; ?>assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-<link rel="stylesheet" href="<?php echo web_root; ?>css/jquery-ui.css"> 
-<!-- <link rel="stylesheet" href="<?php echo web_root; ?>web/viewer.css">  -->
-<!-- Plugins -->
+  <!-- Icons. Uncomment required icon fonts -->
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/fonts/boxicons.css" />
 
- <style type="text/css">
-/*     #navigation {
-        margin-bottom: 40px;
-     }
-     #page-wrapper{
-        min-height: 900px;
-     }
-     #page-footer {
-        border-top: 1px solid #ddd;
-        margin-top: -15px;
-        padding: 10px;
-     }*/
-    /* * { 
-        font-family: 'Lucida Calligraphy';
-     }*/
- </style>
-<!-- Custom styles for this template -->
-<!-- <link href="<?php echo web_root; ?>css/offcanvas.css" rel="stylesheet"> -->
-   <?php
-   admin_confirm_logged_in();
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/css/demo.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/libs/apex-charts/apex-charts.css" />
+  <link rel="stylesheet" href="<?php echo web_root; ?>sneat/assets/vendor/libs/dataTables/dataTables.bootstrap5.min.css" />
+
+  <!-- Page CSS -->
+
+  <!-- Helpers -->
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/js/helpers.js"></script>
+
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="<?php echo web_root; ?>sneat/assets/js/config.js"></script>
+  <?php
+  admin_confirm_logged_in();
   ?>
+
 <body>
- <section id="navigation">
-<nav class="navbar navbar-default  " role="navigation" style="margin-top: 0px">
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
 
-<div class="navbar-header">
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="navbar-brand"  href="<?php echo web_root; ?>admin/index.php" >COMPUTER AIDED INSTRUCTION IN WORLD LITERATURE </a>
-</div>
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="<?php echo web_root; ?>admin/index.php" class="app-brand-link">
+            <span class="app-brand-logo demo">
+              <svg width="25" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <path d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z" id="path-1"></path>
+                  <path d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z" id="path-3"></path>
+                  <path d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z" id="path-4"></path>
+                  <path d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z" id="path-5"></path>
+                </defs>
+                <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
+                    <g id="Icon" transform="translate(27.000000, 15.000000)">
+                      <g id="Mask" transform="translate(0.000000, 8.000000)">
+                        <mask id="mask-2" fill="white">
+                          <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use fill="#696cff" xlink:href="#path-1"></use>
+                        <g id="Path-3" mask="url(#mask-2)">
+                          <use fill="#696cff" xlink:href="#path-3"></use>
+                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
+                        </g>
+                        <g id="Path-4" mask="url(#mask-2)">
+                          <use fill="#696cff" xlink:href="#path-4"></use>
+                          <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
+                        </g>
+                      </g>
+                      <g id="Triangle" transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
+                        <use fill="#696cff" xlink:href="#path-5"></use>
+                        <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+          </a>
 
-  <ul class="nav navbar-top-links navbar-right" >
-   <li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" >
-                <i class="fa fa-user fa-fw"></i> <?php echo $_SESSION['NAME']; ?>  
-            </a> 
-
-    </li>
-         <li><a href="<?php echo web_root; ?>admin/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                </li>
-  </ul>
-
-<div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-            <!--     <li>
-                    <a href="<?php echo web_root; ?>admin/index.php"><i class="fa fa-dashboard fa-fw"></i> Statistic</a>
-                </li> -->
-
-                <li>
-                     <a href="<?php echo web_root; ?>admin/modules/lesson/index.php"><i class="fa fa-user fa-fw"></i> Lesson </a> 
-                </li>
-                 <li>
-                     <a href="<?php echo web_root; ?>admin/modules/exercises/index.php"><i class="fa fa-user fa-fw"></i> Exercises </a> 
-                </li>
-                 <li>
-                     <a href="<?php echo web_root; ?>admin/modules/modstudent/index.php"><i class="fa fa-user fa-fw"></i> Student </a> 
-                </li>
-
-                
-                <li><a href="<?php echo web_root; ?>admin/modules/user/index.php"><i class="fa fa-user fa-fw"></i> Manage Users</a></li>
-                 <!-- <li><a href="<?php echo web_root; ?>admin/modules/autonumber/index.php"><i class="fa fa-reload fa-fw"></i> Autonumber</a></li> -->
-                 <!-- <li><a href="<?php echo web_root; ?>admin/modules/report/index.php"><i class="fa fa-info fa-fw"></i> Report</a></li> -->
-
-            </ul>
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+          </a>
         </div>
-        <!-- /.sidebar-collapse -->
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboard -->
+          <li class="menu-item active">
+            <a href="<?php echo web_root; ?>admin/modules/lesson/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-book-open"></i>
+              <div data-i18n="Pelajaran">Pelajaran</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="<?php echo web_root; ?>admin/modules/exercises/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-pencil"></i>
+              <div data-i18n="Latihan">Latihan</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="<?php echo web_root; ?>admin/modules/modstudent/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-id-card"></i>
+              <div data-i18n="Murid">Murid</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="<?php echo web_root; ?>admin/modules/user/index.php" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-user"></i>
+              <div data-i18n="Manajemen Pengguna">Manajemen Pengguna</div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Navbar -->
+
+        <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="bx bx-menu bx-sm"></i>
+            </a>
+          </div>
+
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+              <div class="nav-item d-flex align-items-center">
+                <i class="bx bx-search fs-4 lh-0"></i>
+                <input type="text" class="form-control border-0 shadow-none" placeholder="Search..." aria-label="Search..." />
+              </div>
+            </div>
+            <!-- /Search -->
+
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <!-- User -->
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <div class="avatar avatar-online">
+                    <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['NAME']; ?>" alt class="w-px-40 h-auto rounded-circle" />
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar avatar-online">
+                            <img src="https://ui-avatars.com/api/?name=<?php echo $_SESSION['NAME']; ?>" alt class="w-px-40 h-auto rounded-circle" />
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="fw-semibold d-block"><?php echo $_SESSION['NAME']; ?></span>
+                          <small class="text-muted">Admin</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="<?php echo web_root; ?>admin/logout.php">
+                      <i class="bx bx-power-off me-2"></i>
+                      <span class="align-middle">Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ User -->
+            </ul>
+          </div>
+        </nav>
+
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <?php check_message(); ?>
+            <?php require_once $content; ?>
+          </div>
+          <!-- / Content -->
+
+          <!-- Footer -->
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+              <div class="mb-2 mb-md-0">
+                © Bimbingan Belajar Fahmi Ramadhan
+              </div>
+            </div>
+          </footer>
+          <!-- / Footer -->
+
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
     </div>
-</nav>
-</section>
 
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
 
-<section id="page-wrapper"> 
-  <?php  check_message(); ?> 
-  <?php  require_once $content;?>  
- </section> 
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/popper/popper.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/js/bootstrap.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-<section id="page-footer"> 
-      <footer>  <p align="center">&copy; COMPUTER AIDED INSTRUCTION IN WORLD LITERATURE </p></footer>
-</section>
-<!-- Plugins -->
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
 
-<script type="text/javascript" language="javascript" src="<?php echo web_root; ?>js/jquery.js"></script> 
-<script src="<?php echo web_root; ?>js/bootstrap.min.js"></script>
-<script src="<?php echo web_root; ?>admin/adminMenu/dist/metisMenu.min.js"></script>
-  
-<script src="<?php echo web_root; ?>js/jquery.dataTables.min.js"></script>/
-<script src="<?php echo web_root; ?>js/dataTables.bootstrap.min.js"></script>
+  <!-- Main JS -->
+  <script src="<?php echo web_root; ?>sneat/assets/js/main.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/dataTables/dataTables.min.js"></script>
+  <script src="<?php echo web_root; ?>sneat/assets/vendor/libs/dataTables/dataTables.bootstrap5.min.js"></script>
 
-<script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="<?php echo web_root; ?>js/locales/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
+  <script src="<?php echo web_root; ?>admin/adminMenu/dist/metisMenu.min.js"></script>
 
-<script type="text/javascript" language="javascript" src="<?php echo web_root; ?>js/kcctc.js"></script>
-<script src="<?php echo web_root;?>assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<script type="text/javascript" src="<?php echo web_root; ?>js/jquery-ui.js"></script>
-<script type="text/javascript" src="<?php echo web_root; ?>js/autofunc.js"></script>
+  <script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="<?php echo web_root; ?>js/locales/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
 
-<script type="text/javascript" charset="utf-8">
-$(document).ready(function() {
-    var t = $('#example').DataTable( {
+  <script type="text/javascript" language="javascript" src="<?php echo web_root; ?>js/kcctc.js"></script>
+  <script src="<?php echo web_root; ?>assets/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  <!-- <script type="text/javascript" src="<?php echo web_root; ?>js/jquery-ui.js"></script> -->
+  <script type="text/javascript" src="<?php echo web_root; ?>js/autofunc.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      var t = $('#example').DataTable({
         "bSort": false,
-        "columnDefs": [ {
-            "searchable": false,
-            "orderable": false,
-            "targets": 0
-        } ],
- 
-
-          //vertical scroll
-         // "scrollY":        "300px",
+        "columnDefs": [{
+          "searchable": false,
+          "orderable": false,
+          "targets": 0
+        }],
+        //vertical scroll
+        // "scrollY":        "300px",
 
         // "scrollCollapse": true,
 
         //ordering start at column 1
-        "order": [[ 1, 'desc' ]]
-    } );
+        "order": [
+          [1, 'desc']
+        ]
+      });
 
-    t.on( 'order.dt search.dt', function () {
-        t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-            cell.innerHTML = i+1;
-        } );
-    } ).draw();
-} );
-
-</script>
-
-
-<script>
-
-$(function(){
-  $(".tds").each(function(i){
-    len=$(this).text().length;
-    if(len>80)
-    {
-      $(this).text($(this).text().substr(0,80)+'...');
-    }
-  });
-});
-  $(function () {
-    //Add text editor 
-     $("#ANNOUNCEMENT_WHAT").wysihtml5();
-     $("#EVENT_WHAT").wysihtml5();
-     $("#compose-textarea").wysihtml5();
-  });
-</script>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker2').datetimepicker({
-            locale: 'ru',
-             autoclose: 1,
+      t.on('order.dt search.dt', function() {
+        t.column(0, {
+          search: 'applied',
+          order: 'applied'
+        }).nodes().each(function(cell, i) {
+          cell.innerHTML = i + 1;
         });
+      }).draw();
     });
-</script>
-
-<script type="text/javascript">
-
-$("#retype_user_pass").focusout(function(){
-
-        var pass = $("#user_pass").val();
-        var repass = $(this).val();
-        if (pass != repass) {
-            alert("Password does not match");
-        };
-});
-
-function validatedpass(){
-
-     var pass = $("#user_pass").val();
-        var repass = $("#retype_user_pass").val();
-        if (pass != repass) {
-            alert("Password does not match");
-            return false
-        }else{
-            return true
-        };
-}
-
-$('#date_pickerfrom').datetimepicker({
-  format: 'yyyy',
-    language:  'en',
-    weekStart: 1,
-    todayBtn:  1,
-    autoclose: 1,
-    todayHighlight: 1,
-    startView: 4,
-    minView: 4,
-    forceParse: 0
-    });
-
-
-$('#date_pickerto').datetimepicker({
-  format: 'yyyy',
-    language:  'en',
-    weekStart: 1,
-    todayBtn:  1,
-    autoclose: 1,
-    todayHighlight: 1,
-    startView: 4,
-    minView: 4,
-    forceParse: 0
-    });
-
-
-
-</script>
-
-
-<script>
-  function checkall(selector)
-  {
-    if(document.getElementById('chkall').checked==true)
-    {
-      var chkelement=document.getElementsByName(selector);
-      for(var i=0;i<chkelement.length;i++)
-      {
-        chkelement.item(i).checked=true;
-      }
-    }
-    else
-    {
-      var chkelement=document.getElementsByName(selector);
-      for(var i=0;i<chkelement.length;i++)
-      {
-        chkelement.item(i).checked=false;
-      }
-    }
-  }
-   function checkNumber(textBox){
-        while (textBox.value.length > 0 && isNaN(textBox.value)) {
-          textBox.value = textBox.value.substring(0, textBox.value.length - 1)
-        }
-        textBox.value = trim(textBox.value);
-      }
-      //
-      function checkText(textBox)
-      {
-        var alphaExp = /^[a-zA-Z]+$/;
-        while (textBox.value.length > 0 && !textBox.value.match(alphaExp)) {
-          textBox.value = textBox.value.substring(0, textBox.value.length - 1)
-        }
-        textBox.value = trim(textBox.value);
-      }
-
   </script>
 
-<script type="text/javascript">
- 
+
+  <script>
+    $(function() {
+      $(".tds").each(function(i) {
+        len = $(this).text().length;
+        if (len > 80) {
+          $(this).text($(this).text().substr(0, 80) + '...');
+        }
+      });
+    });
+    $(function() {
+      //Add text editor 
+      $("#ANNOUNCEMENT_WHAT").wysihtml5();
+      $("#EVENT_WHAT").wysihtml5();
+      $("#compose-textarea").wysihtml5();
+    });
+  </script>
+  <script type="text/javascript">
+    $(function() {
+      $('#datetimepicker2').datetimepicker({
+        locale: 'ru',
+        autoclose: 1,
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $("#retype_user_pass").focusout(function() {
+
+      var pass = $("#user_pass").val();
+      var repass = $(this).val();
+      if (pass != repass) {
+        alert("Password does not match");
+      };
+    });
+
+    function validatedpass() {
+
+      var pass = $("#user_pass").val();
+      var repass = $("#retype_user_pass").val();
+      if (pass != repass) {
+        alert("Password does not match");
+        return false
+      } else {
+        return true
+      };
+    }
+
+    $('#date_pickerfrom').datetimepicker({
+      format: 'yyyy',
+      language: 'en',
+      weekStart: 1,
+      todayBtn: 1,
+      autoclose: 1,
+      todayHighlight: 1,
+      startView: 4,
+      minView: 4,
+      forceParse: 0
+    });
 
 
-// function truncateText(selector, maxLength) {
-//     var element = document.querySelector(selector),
-//         truncated = element.innerText;
+    $('#date_pickerto').datetimepicker({
+      format: 'yyyy',
+      language: 'en',
+      weekStart: 1,
+      todayBtn: 1,
+      autoclose: 1,
+      todayHighlight: 1,
+      startView: 4,
+      minView: 4,
+      forceParse: 0
+    });
+  </script>
 
-//     if (truncated.length > maxLength) {
-//         truncated = truncated.substr(0,maxLength) + '...';
-//     }
-//     return truncated;
-// }
-// //You can then call the function with something like what i have below.
-// document.querySelector('#tds').innerText = truncateText('#tds', 107);
-    </script>
+
+  <script>
+    function checkall(selector) {
+      if (document.getElementById('chkall').checked == true) {
+        var chkelement = document.getElementsByName(selector);
+        for (var i = 0; i < chkelement.length; i++) {
+          chkelement.item(i).checked = true;
+        }
+      } else {
+        var chkelement = document.getElementsByName(selector);
+        for (var i = 0; i < chkelement.length; i++) {
+          chkelement.item(i).checked = false;
+        }
+      }
+    }
+
+    function checkNumber(textBox) {
+      while (textBox.value.length > 0 && isNaN(textBox.value)) {
+        textBox.value = textBox.value.substring(0, textBox.value.length - 1)
+      }
+      textBox.value = trim(textBox.value);
+    }
+    //
+    function checkText(textBox) {
+      var alphaExp = /^[a-zA-Z]+$/;
+      while (textBox.value.length > 0 && !textBox.value.match(alphaExp)) {
+        textBox.value = textBox.value.substring(0, textBox.value.length - 1)
+      }
+      textBox.value = trim(textBox.value);
+    }
+  </script>
+
+  <script type="text/javascript">
+    // function truncateText(selector, maxLength) {
+    //     var element = document.querySelector(selector),
+    //         truncated = element.innerText;
+
+    //     if (truncated.length > maxLength) {
+    //         truncated = truncated.substr(0,maxLength) + '...';
+    //     }
+    //     return truncated;
+    // }
+    // //You can then call the function with something like what i have below.
+    // document.querySelector('#tds').innerText = truncateText('#tds', 107);
+  </script>
 
 </body>
+
 </html>
