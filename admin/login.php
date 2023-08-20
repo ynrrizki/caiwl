@@ -57,6 +57,9 @@ if (isset($_SESSION['USERID'])) {
   <div class="container-xxl">
     <div class="authentication-wrapper authentication-basic container-p-y">
       <div class="authentication-inner">
+        <p>
+          <?php echo check_message() ?>
+        </p>
         <!-- Register -->
         <div class="card">
           <div class="card-body">
@@ -119,7 +122,7 @@ if (isset($_SESSION['USERID'])) {
                 </div>
               </div>
               <div class="mb-3">
-                <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                <button class="btn btn-primary d-grid w-100" type="submit" name="btnLogin">Sign in</button>
               </div>
             </form>
 
