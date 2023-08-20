@@ -19,7 +19,7 @@ if (isset($_SESSION['USERID'])) {
 <html lang="en">
 
 <head>
-  <title>Login V18</title>
+  <title>Login Administrator</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link href="<?php echo web_root; ?>css/bootstrap.min.css" rel="stylesheet"> -->
